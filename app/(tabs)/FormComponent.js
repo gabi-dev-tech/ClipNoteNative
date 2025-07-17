@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, KeyboardAvoidingView, Platform, Alert } from 'react-native';
 import AwesomeAlert from 'react-native-awesome-alerts';
-import { isTitleUnique } from '../helpers/isTitleUnique';
-import { formStyle } from '../styles/formStyle';
+import { isTitleUnique } from '../../helpers/isTitleUnique';
+import { formStyle } from '../../styles/formStyle';
 
 export default function FormComponent({ onNotesClick, data }) {
   const URL = process.env.EXPO_PUBLIC_API_URL;

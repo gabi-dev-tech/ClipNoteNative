@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { View, Text, Button, Alert } from "react-native";
 import { FlatList } from "react-native";
 import { homeStyle } from "../../styles/homeStyle";
+import Toast from "react-native-toast-message";
 
 export default function Home() {
   const URL = process.env.EXPO_PUBLIC_API_URL;
@@ -28,6 +29,15 @@ export default function Home() {
           })
             .then(() => {
               getData();
+              Toast.show({
+                type: "success",
+                text1: "Operación exitosa",
+                text2: "La nota se elimino corectamente👋",
+                position: "top",
+                visibilityTime: 3000,
+                autoHide: true,
+                topOffset: 1,
+              });
             })
             .catch(() => {
               Alert.alert("Error", "Error al eliminar");
@@ -58,6 +68,7 @@ export default function Home() {
 
   return (
     <View style={homeStyle.container}>
+      <Toast />
       <Text style={homeStyle.titulo}>ClipNote...</Text>
       {data.length > 0 ? (
         <FlatList

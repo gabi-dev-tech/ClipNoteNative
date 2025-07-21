@@ -43,7 +43,7 @@ export const formStyle = StyleSheet.create({
     backgroundColor: "#fff",
   },
   button: {
-    backgroundColor: "#222",
+    backgroundColor: "#2196F3",
     borderRadius: 10,
     paddingVertical: 16,
     marginTop: 20,
